@@ -1,0 +1,14 @@
+<mj-head>
+  <mj-title>{{ emailTitle }}</mj-title>
+  <mj-font name="DM Sans" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" />
+  <mj-attributes>
+    <mj-class name="btn" color="#ffffff" background-color="#2196F3" align="left" color="#ffffff" border-radius="4px" font-size="17px" display="inline" />
+    <mj-class name="btn-success" color="#ffffff" background-color="#8CCE39" align="left" color="#ffffff" border-radius="4px" font-size="17px" display="inline" />
+    <mj-class name="btn-danger" color="#ffffff" background-color="#D34037" align="left" color="#ffffff" border-radius="4px" font-size="17px" display="inline" />
+    <mj-class name="link" color="#2196F3" font-size="17px" />
+    <mj-all font-family="DM Sans" line-height="1.5" />
+  </mj-attributes>
+  <mj-style inline="inline">
+    .body-section {}
+  </mj-style>
+</mj-head>

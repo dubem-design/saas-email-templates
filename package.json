@@ -1,0 +1,36 @@
+{
+  "name": "saas-email-templates",
+  "version": "0.0.1",
+  "description": "Awesome email templates for Saas startups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dubem-design/saas-email-templates.git"
+  },
+  "keywords": [
+    "email",
+    "saas",
+    "template",
+    "mail",
+    "gmail",
+    "template.marketing",
+    "design",
+    "dubem.design",
+    "dubem"
+  ],
+  "author": "dubem.design",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dubem-design/saas-email-templates/issues"
+  },
+  "homepage": "https://github.com/dubem-design/saas-email-templates#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-mjml": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "mjml": "^4.7.1"
+  }
+}
