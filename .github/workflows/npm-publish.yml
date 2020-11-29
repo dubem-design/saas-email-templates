@@ -19,7 +19,8 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-      - uses: 2KAbhishek/gulp-runner@v0.3
+      - run: npm i -g gulp
+      - run: gulp
 
   publish-npm:
     needs: build

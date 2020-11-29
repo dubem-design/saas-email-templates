@@ -18,5 +18,10 @@ function transpile_scripts(cb) {
     .on("end", cb);
 }
 
+function watch_scripts(cb) {
+  transpile_scripts(cb);
+  gulp.watch("src/**/*.mjml", transpile_scripts);
+}
+
 gulp.task("default", transpile_scripts);
-gulp.watch("src/**/*.mjml", transpile_scripts);
+gulp.task("watch", watch_scripts);
