@@ -1,6 +1,6 @@
 {
   "name": "@dubem-design/saas-email-templates",
-  "version": "0.0.3",
+  "version": "0.0.31",
   "description": "Awesome email templates for Saas startups",
   "main": "index.js",
   "scripts": {
