@@ -30,8 +30,10 @@ Todo
 | team_invitation | team | prompt |
 | team_invitation_invitee_reminder | team | reminder |
 ### Resources
+* [Figma] - Best UI design platform
 * [MJML] - Great for email templates!
 * [Gulp] - Compile MJML files
+* [Esign] - E signature maker
 
 ### Todos
 
@@ -47,8 +49,10 @@ MIT
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
+   [Figma]: <https://www.figma.com/>
    [MJML]: <https://github.com/mjmlio/mjml>
    [Gulp]: <http://gulpjs.com>
+   [Esign]: <http://www.esignaturemaker.com/live-digital-signature/>
 
    [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
    [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
