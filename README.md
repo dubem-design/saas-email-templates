@@ -11,24 +11,24 @@ SAT is a free resource nd design solution to help startups focus on their core s
 ### Usage
 Todo
 ### Templates
-| Name | Product Life Cycle | Kind |
-| ------ | ------ | ------ |
-| Product survey | launch | surevy |
-| Relaunch campaign | launch | notice |
-| Early access notice | launch | notice |
-| Launch notice | launch | notice |
-| Email verification prompt | auth | prompt |
-| Password Change Prompt | auth | prompt |
-| New device Login Prompt | auth | prompt |
-| Welcome notice | onboarding | notice |
-| On-boarding notice | onboarding | notice |
-| free_trial_reminder | billing | reminder |
-| free_trail_ended | billing | notice |
-| after_free_trail_ended | billing | notice |
-| reactivation_attempt_feedback | billing | notice |
-| Invoice | billing | notice |
-| team_invitation | team | prompt |
-| team_invitation_invitee_reminder | team | reminder |
+| Name | Product Life Cycle | Kind | Status |
+| ------ | ------ | ------ | ------ |
+| Product survey | launch | surevy | in-progress |
+| Relaunch campaign | launch | notice | designing-UI |
+| Early access notice | launch | notice | designing-UI |
+| Launch notice | launch | notice | designing-UI |
+| Email verification prompt | auth | prompt | designing-UI |
+| Password Change Prompt | auth | prompt | designing-UI |
+| New device Login Prompt | auth | prompt | designing-UI |
+| Welcome notice | onboarding | notice | designing-UI |
+| On-boarding notice | onboarding | notice | designing-UI |
+| free_trial_reminder | billing | reminder | designing-UI |
+| free_trail_ended | billing | notice | designing-UI |
+| after_free_trail_ended | billing | notice | designing-UI |
+| reactivation_attempt_feedback | billing | notice | designing-UI |
+| Invoice | billing | notice | designing-UI |
+| team_invitation | team | prompt | designing-UI |
+| team_invitation_invitee_reminder | team | reminder | designing-UI |
 ### Resources
 * [Figma] - Best UI design platform
 * [MJML] - Great for email templates!
