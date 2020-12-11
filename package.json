@@ -2,11 +2,16 @@
   "name": "@dubem-design/saas-email-templates",
   "version": "0.0.6",
   "description": "Awesome email templates for Saas startups",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --inspect index.js",
     "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src2 --out-dir dist",
+    "build:watch": "babel src2 --out-dir dist --watch",
+    "prestart": "npm run build",
+    "start": "npm run build:watch & nodemon ./dist/server.js --watch ./dist",
+    "generate": "node ./dist/cli.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +46,15 @@
     "gulp-watch": "^5.0.1",
     "handlebars": "^4.7.6",
     "http": "^0.0.1-security",
-    "mjml": "^4.7.1"
+    "mjml": "^4.7.1",
+    "mjml-react": "^1.0.59",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10"
   }
 }

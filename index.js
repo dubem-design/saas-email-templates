@@ -3,7 +3,19 @@ const app = express();
 const port = 3001;
 const { compileHtml } = require("./email");
 const { config } = require("./config/index");
-console.log(config);
+
+// Mjml react
+import { render } from "mjml-react";
+import * as productSurvey from "./src2/templates/launch/product-survey";
+
+app.get("/2", (req, res) => {
+  const { html } = render(productSurvey.generate(), {
+    validationLevel: "soft",
+  });
+  res.send(html);
+});
+
+// using just MJML
 app.get("/", (req, res) => {
   res.send(
     compileHtml(
