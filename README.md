@@ -2,6 +2,9 @@
 
 [![npm version](https://img.shields.io/npm/v/publish-please.svg)](https://www.npmjs.com/package/publish-please)
 
+![alt="SAT email template thumbnail" text](https://s3.eu-west-3.amazonaws.com/dubem.design/resources/thumbnail-small.jpg)
+
+
 SAT is a free resource nd design solution to help startups focus on their core solution while still maintaining a beautiful looking email template compatible accross multiple browsers and responsive screen sizes. The core of this project is to:
   - Provide well designed email templates
   - Provide content ideas that can easily be resued

@@ -4,6 +4,7 @@
   "description": "Awesome email templates for Saas startups",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon --inspect index.js",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,9 +33,14 @@
     "access": "public"
   },
   "dependencies": {
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-mjml": "^4.0.2",
     "gulp-watch": "^5.0.1",
+    "handlebars": "^4.7.6",
+    "http": "^0.0.1-security",
     "mjml": "^4.7.1"
   }
 }
