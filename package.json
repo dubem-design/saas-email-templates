@@ -1,14 +1,14 @@
 {
   "name": "@dubem-design/saas-email-templates",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Awesome email templates for Saas startups",
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --inspect index.js",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src2 --out-dir dist",
-    "build:watch": "babel src2 --out-dir dist --watch",
+    "build": "babel src --out-dir dist",
+    "build:watch": "babel src --out-dir dist --watch",
     "prestart": "npm run build",
     "start": "npm run build:watch & nodemon ./dist/server.js --watch ./dist",
     "generate": "node ./dist/cli.js"
