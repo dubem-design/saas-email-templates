@@ -10,7 +10,7 @@ import {
   MjmlText,
 } from "mjml-react";
 
-function Hero({ data, config }) {
+function Hero({ data, config }: {data: any, config: any}) {
   return (
     <MjmlWrapper padding="0px" padding-bottom="0">
       <MjmlSection border-radius="0px 0px 8px 8px">
@@ -33,15 +33,15 @@ function Hero({ data, config }) {
             <MjmlSocialElement
               name="facebook"
               href="https://mjml.io/"
-            ></MjmlSocialElement>
+            >facebook</MjmlSocialElement>
             <MjmlSocialElement
               name="twitter"
               href="https://mjml.io/"
-            ></MjmlSocialElement>
+            >twitter</MjmlSocialElement>
             <MjmlSocialElement
               name="linkedin"
               href="https://mjml.io/"
-            ></MjmlSocialElement>
+            >instagram</MjmlSocialElement>
           </MjmlSocial>
         </MjmlColumn>
         <MjmlColumn width="100%">

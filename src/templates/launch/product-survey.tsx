@@ -19,16 +19,20 @@ import Footer from "../../blocks/Footer";
 
 // const css = readFileSync("./assets/styles.css").toString();
 
-export const generate = (data, config) => {
+const generate = (data: any, config: any) => {
   return (
     <Mjml>
-      <Head data={data} />
+      <Head data={data} config={config} />
       <MjmlBody width={500} backgroundColor={config.bgColor}>
-        <Header />
-        <Hero />
-        <Body />
-        <Footer />
+        <Header data={data} config={config} />
+        <Hero data={data} config={config} />
+        <Body data={data} config={config} />
+        <Footer data={data} config={config} />
       </MjmlBody>
     </Mjml>
   );
 };
+
+const productSurvey = { generate }
+
+export default productSurvey;

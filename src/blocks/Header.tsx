@@ -2,7 +2,7 @@ import React from "react";
 
 import { MjmlSection, MjmlColumn, MjmlImage } from "mjml-react";
 
-function Header({ data, config }) {
+function Header({ data, config }: {data: any, config: any}) {
   return (
     <MjmlSection
       padding-bottom="0px"

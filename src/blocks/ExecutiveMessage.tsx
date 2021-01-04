@@ -15,7 +15,7 @@ const avatarStyle = {
   backgroundColor: "#000",
 };
 
-function Body({ data, config }) {
+function Body({ data, config }: {data: any, config: any}) {
   return (
     <MjmlColumn width="100%">
       <MjmlSection>
@@ -25,7 +25,7 @@ function Body({ data, config }) {
             height="50px"
             border-radius="25px"
             align="left"
-          ></MjmlButton>
+          >Button</MjmlButton>
         </MjmlColumn>
         <MjmlColumn width="50px">
           <MjmlButton
@@ -33,7 +33,7 @@ function Body({ data, config }) {
             height="50px"
             border-radius="25px"
             align="left"
-          ></MjmlButton>
+          >Button</MjmlButton>
         </MjmlColumn>
       </MjmlSection>
       <MjmlText mj-class="text-h2">Hi, there</MjmlText>

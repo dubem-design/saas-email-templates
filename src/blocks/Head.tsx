@@ -11,7 +11,7 @@ import {
   MjmlAll,
 } from "mjml-react";
 
-function Head({ data, config }) {
+function Head({ data, config }: {data: any, config: any}) {
   return (
     <MjmlHead>
       <MjmlTitle>{data.title}</MjmlTitle>
@@ -50,7 +50,6 @@ function Head({ data, config }) {
           color="#ffffff"
           background-color="#2196F3"
           align="left"
-          color="#ffffff"
           border-radius="4px"
           font-size="17px"
           display="inline"
@@ -59,7 +58,6 @@ function Head({ data, config }) {
           name="btn-primary"
           color="#ffffff"
           align="left"
-          color="#ffffff"
           border-radius="4px"
           font-size="17px"
           display="inline"
@@ -69,7 +67,6 @@ function Head({ data, config }) {
           color="#ffffff"
           background-color="#8CCE39"
           align="left"
-          color="#ffffff"
           border-radius="4px"
           font-size="17px"
           display="inline"
@@ -79,7 +76,6 @@ function Head({ data, config }) {
           color="#ffffff"
           background-color="#D34037"
           align="left"
-          color="#ffffff"
           border-radius="4px"
           font-size="17px"
           display="inline"

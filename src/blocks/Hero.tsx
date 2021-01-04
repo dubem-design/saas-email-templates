@@ -2,7 +2,7 @@ import React from "react";
 
 import { MjmlSection, MjmlColumn, MjmlImage } from "mjml-react";
 
-function Hero({ data, config }) {
+function Hero({ data, config }: {data: any, config: any}) {
   return (
     <MjmlSection
       background-color="#000000"
