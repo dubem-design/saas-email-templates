@@ -21,6 +21,7 @@ export interface styleGuide {
 	headingFont?: String;
 	bodyFont?: String;
 	customStyling?: String;
+  bgColor?: String;
 }
 
 export interface layout {

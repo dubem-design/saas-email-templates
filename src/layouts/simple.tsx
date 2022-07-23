@@ -11,11 +11,11 @@ import {
   MjmlText,
 } from "mjml-react";
 
-import Head from "../blocks/Head";
-import Header from "../blocks/Header";
-import Hero from "../blocks/Hero";
-import Body from "../blocks/Body";
-import Footer from "../blocks/Footer";
+import Head from "../components/Head";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Body from "../components/Body";
+import Footer from "../components/Footer";
 
 // const css = readFileSync("./assets/styles.css").toString();
 
@@ -26,6 +26,7 @@ const SimpleLayout = (props: any) => {
     <Mjml>
       <Head data={data} config={config} />
       <MjmlBody width={500} backgroundColor={config.bgColor}>
+        {config.bgColor}
         <Header data={data} config={config} />
         <Hero data={data} config={config} />
         <Body data={data} config={config} >

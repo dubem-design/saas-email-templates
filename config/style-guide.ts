@@ -4,5 +4,6 @@ exports.styleGuide = {
   headingColor: "",
   textDarkModeColor: "",
   headingDarkModeColor: "",
+  backgroundColor: "#eee",
   darkMode: "",
 };

@@ -1,12 +1,15 @@
 "use strict";
 
-var _mjmlReact = require("mjml-react");
+var { render } = require("mjml-react");
 
 var _email = require("./templates/launch/product-survey");
 
-var _render = (0, _mjmlReact.render)((0, _email.generate)(), {
-    validationLevel: "soft",
-  }),
-  html = _render.html;
+const template = function (name: any, config: any) {
+  const { html } = render(allTemplates.productSurvey.generate(name, config), {
+    validationLevel: 'soft',
+  });
 
-console.log(html);
+  return html;
+};
+
+console.log(template('product'));
