@@ -4,7 +4,7 @@
   "description": "Awesome email templates for Saas startups",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --inspect index.ts",
+    "dev": "nodemon src/index.ts",
     "start": "ts-node-dev --poll src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir dist",

@@ -17,7 +17,7 @@ const config: config = {
 	},
 };
 
-app.get('/2', (req: Request, res: Response) => {
+app.get('/template', (req: Request, res: Response) => {
 	const { html } = render(productSurvey.generate(data, config), {
 		validationLevel: 'soft',
 	});

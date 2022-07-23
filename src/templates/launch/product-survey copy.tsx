@@ -16,15 +16,20 @@ import Header from "../../blocks/Header";
 import Hero from "../../blocks/Hero";
 import Body from "../../blocks/Body";
 import Footer from "../../blocks/Footer";
-import SimpleLayout from "../../layouts/simple";
 
 // const css = readFileSync("./assets/styles.css").toString();
 
 const generate = (data: any, config: any) => {
   return (
-    <SimpleLayout data={data} config={config}>
-      Hello fjngjnjnnj
-    </SimpleLayout>
+    <Mjml>
+      <Head data={data} config={config} />
+      <MjmlBody width={500} backgroundColor={config.bgColor}>
+        <Header data={data} config={config} />
+        <Hero data={data} config={config} />
+        <Body data={data} config={config} />
+        <Footer data={data} config={config} />
+      </MjmlBody>
+    </Mjml>
   );
 };
 

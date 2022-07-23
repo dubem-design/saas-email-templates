@@ -10,9 +10,10 @@ import {
 
 import ExecutiveMessage from "./ExecutiveMessage";
 
-function Body({ data, config }: {data: any, config: any}) {
+function Body({ data, config, children }: { data: any, config: any, children: any }) {
   return (
     <MjmlWrapper padding="0px" padding-bottom="0">
+      {children}
       <MjmlSection border-radius="0px 0px 8px 8px" background-color="#ffffff">
         <MjmlColumn width="100%">
           <MjmlText mj-class="text-h2">Hi, there</MjmlText>
