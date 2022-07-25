@@ -4,6 +4,7 @@ import { readFileSync } from "fs";
 import {
   Mjml,
   MjmlBody,
+  MjmlWrapper,
   MjmlSection,
   MjmlColumn,
   MjmlButton,
@@ -11,28 +12,26 @@ import {
   MjmlText,
 } from "mjml-react";
 
-import Head from "../components/Head";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Body from "../components/Body";
+import Head from "../components/layout/Head";
+import Header from "../components/layout/Header";
+import Body from "../components/layout/Body";
 import Footer from "../components/Footer";
 
 // const css = readFileSync("./assets/styles.css").toString();
 
 const SimpleLayout = (props: any) => {
   const { children, data, config } = props
+  const { styleGuide } = config
 
   return (
     <Mjml>
       <Head data={data} config={config} />
-      <MjmlBody width={500} backgroundColor={config.bgColor}>
-        {config.bgColor}
-        <Header data={data} config={config} />
-        <Hero data={data} config={config} />
-        <Body data={data} config={config} >
+      <MjmlBody width={500} backgroundColor={styleGuide.bgColor}>
+        <MjmlWrapper padding-top="40px" padding-bottom="40px">
+          <Header data={data} config={config} />
           {children}
-        </Body>
-        <Footer data={data} config={config} />
+          <Footer data={data} config={config} />
+        </MjmlWrapper>
       </MjmlBody>
     </Mjml>
   );

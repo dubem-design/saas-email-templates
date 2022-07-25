@@ -2,7 +2,6 @@ import express, { Request, Response } from 'express';
 import { render } from 'mjml-react';
 
 import { config, data } from './common/types';
-import productSurvey from './templates/launch/product-survey';
 
 const port = 3001;
 const app = express();
@@ -18,8 +17,14 @@ const config: config = {
   },
 };
 
-app.get('/template', (req: Request, res: Response) => {
-  const { html } = render(productSurvey.generate(data, config), {
+import { template } from './index'
+
+
+app.get('/template/:name', (req: Request, res: Response) => {
+
+  const name = req.query.name
+  console.log('name', name);
+  const { html } = render(template['name'].generate(data, config), {
     validationLevel: 'soft',
   });
   res.send(html);

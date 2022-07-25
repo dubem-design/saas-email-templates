@@ -1,13 +1,19 @@
 import { render } from 'mjml-react';
 
-import allTemplates from './templates/index';
+// auto-import templates
+const normalizedPath = require("path").join(__dirname, "templates");
+let templateList: { [key: string]: any } = {}
+require("fs").readdirSync(normalizedPath).forEach(function (file: any) {
+  const name = file.split('.tsx')[0]
+  templateList[name] = require("./templates/" + file);
+});
 
-const template = function (name: any, config: any) {
-	const { html } = render(allTemplates.productSurvey.generate(name, config), {
-		validationLevel: 'soft',
-	});
+export const template = function (name: any, config: any) {
+  if (!templateList[name]) throw 'Template not found'
+  const { html } = render(templateList[name].generate(name, config), {
+    validationLevel: 'soft',
+  });
 
-	return html;
+  return html;
 };
 
-exports.template = template;

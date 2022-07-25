@@ -8,7 +8,7 @@ import {
   MjmlButton,
 } from "mjml-react";
 
-import ExecutiveMessage from "./ExecutiveMessage";
+import ExecutiveMessage from "../ExecutiveMessage";
 
 function Body({ data, config, children }: { data: any, config: any, children: any }) {
   return (
@@ -16,7 +16,7 @@ function Body({ data, config, children }: { data: any, config: any, children: an
       {children}
       <MjmlSection border-radius="0px 0px 8px 8px" background-color="#ffffff">
         <MjmlColumn width="100%">
-          <MjmlText mj-class="text-h2">Hi, there</MjmlText>
+          <MjmlText mj-class="text-h2">Hi, there </MjmlText>
           <MjmlText>
             Hello there, You are getting this email because you signup to our
             survey of as a result of a follow up from one of our team memberes.
@@ -27,7 +27,7 @@ function Body({ data, config, children }: { data: any, config: any, children: an
             Fill Survey
           </MjmlButton>
         </MjmlColumn>
-        <ExecutiveMessage data={data} config={config} />
+        {/* <ExecutiveMessage data={data} config={config} /> */}
       </MjmlSection>
     </MjmlWrapper>
   );
