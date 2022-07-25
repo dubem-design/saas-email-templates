@@ -1,6 +1,4 @@
 import express, { Request, Response } from 'express';
-import { render } from 'mjml-react';
-
 import { config, data } from './common/types';
 
 const port = 3001;
@@ -19,15 +17,9 @@ const config: config = {
 
 import { template } from './index'
 
-
 app.get('/template/:name', (req: Request, res: Response) => {
-
-  const name = req.query.name
-  console.log('name', name);
-  const { html } = render(template['name'].generate(data, config), {
-    validationLevel: 'soft',
-  });
+  const html = template(req.params.name as string, config)
   res.send(html);
 });
 
-app.listen(port, () => console.log(`Listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));

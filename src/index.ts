@@ -8,7 +8,7 @@ require("fs").readdirSync(normalizedPath).forEach(function (file: any) {
   templateList[name] = require("./templates/" + file);
 });
 
-export const template = function (name: any, config: any) {
+export const template = function (name: string, config: any): string {
   if (!templateList[name]) throw 'Template not found'
   const { html } = render(templateList[name].generate(name, config), {
     validationLevel: 'soft',

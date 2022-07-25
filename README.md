@@ -1,4 +1,4 @@
-# Saas Email Templates- BETA (SAT)
+# Saas Email Templates- ALPHA (SAT)
 
 [![npm version](https://img.shields.io/npm/v/publish-please.svg)](https://www.npmjs.com/package/publish-please)
 
