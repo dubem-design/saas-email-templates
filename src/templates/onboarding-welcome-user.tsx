@@ -11,23 +11,17 @@ export const generate = (data: any, config: any,) => {
         {/* <Hero data={data} config={config} /> */}
         <MjmlSection>
           <MjmlColumn width="100%">
-            <MjmlText mj-class="text-h2">{data.bodyTitle || 'Confirm your email address'} </MjmlText>
+            <MjmlText mj-class="text-h2">{data.bodyTitle || 'Welcome onboard'} </MjmlText>
             <MjmlDivider borderWidth={1} borderColor={config.backgroundColor} />
             <MjmlText>
               Hi, {data.name}
             </MjmlText>
             <MjmlText>
-              Please confirm your email by clicking the button below.
+              Please enter this confirmation code when logged into your account
             </MjmlText>
             <MjmlButton background-color={config.primaryColor} mj-class="btn-primary" href={data.link}>
-              Verify your email address
+              Get started
             </MjmlButton>
-            <MjmlText paddingBottom={0}>
-              Or you can copy the link below and paste into your browser
-            </MjmlText>
-            <MjmlText color={config.primaryColor}>
-              {data.link}
-            </MjmlText>
           </MjmlColumn>
           {/* <ExecutiveMessage data={data} config={config} /> */}
         </MjmlSection>

@@ -11,7 +11,7 @@ export const generate = (data: any, config: any,) => {
         {/* <Hero data={data} config={config} /> */}
         <MjmlSection>
           <MjmlColumn width="100%">
-            <MjmlText mj-class="text-h2">{data.bodyTitle} </MjmlText>
+            <MjmlText mj-class="text-h2">{data.bodyTitle || 'Confirm your email address'} </MjmlText>
             <MjmlDivider borderWidth={1} borderColor={config.backgroundColor} />
             <MjmlText>
               Hi, {data.name}

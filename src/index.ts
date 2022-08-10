@@ -18,3 +18,4 @@ export const template = function (name: string, data: object, config: any): stri
   return html;
 };
 
+export const list = templateList
