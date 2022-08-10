@@ -5,49 +5,40 @@ import {
   MjmlSection,
   MjmlColumn,
   MjmlImage,
-  MjmlSocial,
-  MjmlSocialElement,
+  MjmlDivider,
   MjmlText,
 } from "mjml-react";
 
-function Hero({ data, config }: {data: any, config: any}) {
+function Hero({ data, config }: { data: any, config: any }) {
   return (
     <MjmlWrapper padding="0px" padding-bottom="0">
-      <MjmlSection border-radius="0px 0px 8px 8px">
-        <MjmlColumn width="65%">
+      <MjmlSection>
+        {/* <MjmlDivider borderColor={'#ddd'} borderWidth={1} /> */}
+        {/* <MjmlColumn width="65%">
           <MjmlImage
-            src="https://s3.eu-west-3.amazonaws.com/dubem.design/resources/sat-logo.png"
+            src={config.footerLogo}
             alt="SAT Logo"
-            height="25px"
             align="left"
             width="75px"
+            height="auto"
           />
         </MjmlColumn>
         <MjmlColumn width="35%">
-          <MjmlSocial
-            font-size="15px"
-            icon-size="25px"
-            mode="horizontal"
-            align="right"
-          >
-            <MjmlSocialElement
-              name="facebook"
-              href="https://mjml.io/"
-            >facebook</MjmlSocialElement>
-            <MjmlSocialElement
-              name="twitter"
-              href="https://mjml.io/"
-            >twitter</MjmlSocialElement>
-            <MjmlSocialElement
-              name="linkedin"
-              href="https://mjml.io/"
-            >instagram</MjmlSocialElement>
-          </MjmlSocial>
-        </MjmlColumn>
-        <MjmlColumn width="100%">
-          <MjmlText mj-class="text-small" color="#8c8c8c">
-            @ 2020 Logo. All rights reserved
+          <MjmlText mj-class="text-small" color="#8c8c8c" align="right">
+            {config.copyRightText}
           </MjmlText>
+        </MjmlColumn> */}
+        <MjmlColumn width="100%">
+          <MjmlText mj-class="text-small" color="#8c8c8c" align="center">
+            {config.footerText}
+          </MjmlText>
+          <MjmlImage
+            src={config.footerLogo}
+            alt="SAT Logo"
+            align="center"
+            width="75px"
+            height="auto"
+          />
         </MjmlColumn>
       </MjmlSection>
     </MjmlWrapper>

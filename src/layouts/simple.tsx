@@ -21,15 +21,16 @@ import Footer from "../components/Footer";
 
 const SimpleLayout = (props: any) => {
   const { children, data, config } = props
-  const { styleGuide } = config
 
   return (
     <Mjml>
       <Head data={data} config={config} />
-      <MjmlBody width={500} backgroundColor={styleGuide.bgColor}>
-        <MjmlWrapper padding-top="40px" padding-bottom="40px">
+      <MjmlBody width={500} backgroundColor={config.backgroundColor}>
+        <MjmlWrapper padding-top={config.paddingTop || 0} padding-bottom={config.paddingBottom || 0} paddingLeft={config.paddingLeft} paddingRight={config.paddingRight}>
           <Header data={data} config={config} />
-          {children}
+          <MjmlSection border-radius={`0px 0px ${config.borderRadius} ${config.borderRadius}`} background-color="#ffffff" paddingTop={0}>
+            {children}
+          </MjmlSection>
           <Footer data={data} config={config} />
         </MjmlWrapper>
       </MjmlBody>

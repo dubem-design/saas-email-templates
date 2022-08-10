@@ -2,7 +2,7 @@ import React from "react";
 
 import { MjmlSection, MjmlColumn, MjmlImage } from "mjml-react";
 
-function Header({ data, config }: {data: any, config: any}) {
+function Header({ data, config }: { data: any, config: any }) {
   return (
     <MjmlSection
       padding-bottom="0px"
@@ -11,15 +11,17 @@ function Header({ data, config }: {data: any, config: any}) {
       background-repeat="no-repeat"
       padding-top="20px"
       css-class="body-section"
-      border-radius="8px 8px 0px 0px"
+      border-radius={`${config.borderRadius} ${config.borderRadius} 0px 0px`}
     >
       <MjmlColumn>
         <MjmlImage
-          src="https://s3.eu-west-3.amazonaws.com/dubem.design/resources/sat-logo.png"
+          src={config.logo}
+          align={config.logoAlign}
           alt="SAT Logo"
-          height="35px"
+          height="auto"
           width="85px"
         />
+        <pre>{config.logo}</pre>
       </MjmlColumn>
     </MjmlSection>
   );
