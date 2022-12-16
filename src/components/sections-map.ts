@@ -1,5 +1,4 @@
 import SectionsSlot from './SectionsSlot';
-import FancyStripe from './sections/FancyStripe';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
 import Spacer from './sections/Spacer';
@@ -23,9 +22,6 @@ const section: any = {
 	},
 	spacer: {
 		component: Spacer,
-	},
-	stripe: {
-		component: FancyStripe,
 	},
 	header: {
 		component: Header,
