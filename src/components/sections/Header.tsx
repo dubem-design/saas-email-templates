@@ -7,18 +7,26 @@ import {
 	MjmlImage,
 	MjmlText,
 } from 'mjml-react';
+import { config } from 'dotenv';
 
-function Element({ content }: { content: any }) {
-	return (
+function Element({
+	config,
+	content,
+}: {
+	config: any;
+	content: any;
+}) {
+  const { backgroundColor } = content;
+  return (
 		<MjmlSection
-			backgroundColor={content.backgroundColor || '#fff'}
+			backgroundColor={backgroundColor || '#fff'}
 			padding={content.padding || '30px 30px'}
 			textAlign="left"
 		>
 			<MjmlColumn width="33.33333333333333%" vertical-align="middle">
 				<MjmlImage
 					src={content.logoUrl}
-					align="left"
+					align={content.align || config.align || 'left'}
 					alt="OnePage"
 					padding="0px"
 					width="100px"

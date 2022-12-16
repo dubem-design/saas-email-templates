@@ -1,16 +1,14 @@
 import express, { Request, Response } from 'express';
 import { config, sections, layout } from './mock/index';
-import mailSpinner from './index';
+import mailSetup from './index';
 
 const port = 3003;
 const app = express();
 
-const mailManager = new mailSpinner({
-	layout,
-});
+const mailTemplate = new mailSetup(config, layout);
 
 app.get('/', (req: Request, res: Response) =>
-	res.send(mailManager.generate({ config, sections }).html)
+	res.send(mailTemplate.generate(config, sections).html)
 );
 
 app.listen(port, () =>

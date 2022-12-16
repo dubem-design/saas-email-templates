@@ -1,51 +1,22 @@
-export const config = {
-	// setup
-	// env: 'Development',
+import { configType, componentType } from '../common/types';
+
+export const config: configType = {
 	title: 'New Env',
-	css: {
-		a: {
-			color: '#57CC99',
-			textDecoration: 'none',
-		},
-	},
-	logo: 'https://storage.googleapis.com/cadbod-beta-bucket/logo%3Dlogo.png',
-	logoAlign: 'left',
-	footerLogo:
-		'https://storage.googleapis.com/cadbod-beta-bucket/logo%3Dlogo.png',
 	backgroundColor: '#efefef',
-	bodyColor: '#ffffff',
+	align: 'left',
 	primaryColor: '#5073CC',
 	borderRadius: '2px',
-	paddingTop: '20px',
-	paddingLeft: '10px',
-	paddingRight: '10px',
-	paddingBottom: '20px',
-	copyrightText: '© 2020 Yaw company inc. 115 Some place on Earth, USA',
-	footerText: 'With ❤️ from the team',
-	socialLinks: [
-		{ name: 'facebook', url: 'https://www.facebook.com/' },
-		{ name: 'twitter', url: 'https://www.twitter.com/' },
-		{ name: 'instagram', url: 'https://www.instagram.com/' },
-		{ name: 'github', url: 'https://www.github.com/' },
-		{ name: 'dribbble', url: 'https://www.dribbble.com/' },
-		{ name: 'google', url: 'https://www.google.com/' },
-		{ name: 'pinterest', url: 'https://www.pinterest.com/' },
-		{ name: 'linkedin', url: 'https://www.linkedin.com/' },
-		{ name: 'web', url: 'https://www.yawcompany.com/' },
-		{ name: 'medium', url: 'https://www.medium.com/' },
-		{ name: 'vimeo', url: 'https://www.vimeo.com/' },
-		{ name: 'youtube', url: 'https://www.youtube.com/' },
-	],
-	// pending
+	padding: '0px 30px',
+	color: '#637381',
 };
 
-export const layout = [
+export const layout: Array<componentType> = [
 	{
 		section: 'spacer',
 	},
 	{
 		section: 'env',
-		env: 'STAGING',
+		text: 'STAGING',
 	},
 	{
 		section: 'spacer',
@@ -69,7 +40,7 @@ export const layout = [
 		logoUrl: 'https://storage.googleapis.com/tef-website/Logo.png',
 		padding: '30px',
 		backgroundColor: '#fff',
-		links: [{ title: 'Dashboard' }, { title: 'Profile' }],
+		// links: [{ title: 'Dashboard' }, { title: 'Profile' }],
 	},
 	{
 		section: 'body',
@@ -77,6 +48,7 @@ export const layout = [
 	{
 		section: 'footer',
 		logoUrl: 'https://storage.googleapis.com/tef-website/Icon.png',
+		text: '© 2020 OnePage. All rights reserved.',
 	},
 	{
 		section: 'spacer',
@@ -84,19 +56,19 @@ export const layout = [
 	},
 ];
 
-export const sections = [
-	{
-		section: 'hero',
-		fullWidth: false,
-		padding: '0px 30px',
-		heroBackgroundImage: 'http://191n.mj.am/img/191n/1t/h0.jpg',
-		heroBackgroundColor: '#ddd',
-		backgroundColor: '#fff',
-	},
-	{
-		section: 'content',
-		padding: '0px 30px',
-	},
+export const sections: Array<componentType> = [
+	// {
+	// 	section: 'hero',
+	// 	fullWidth: false,
+	// 	padding: '0px 30px',
+	// 	image: 'http://191n.mj.am/img/191n/1t/h0.jpg',
+	// 	heroBackgroundColor: '#ddd',
+	// 	backgroundColor: '#fff',
+	// },
+	// {
+	// 	section: 'content',
+	// 	padding: '0px 30px',
+	// },
 	{
 		section: 'divider',
 		backgroundColor: '#fff',
@@ -106,27 +78,47 @@ export const sections = [
 		borderStyle: 'dashed', // solid, dashed, dotted
 	},
 	{
-		section: 'person',
-		padding: '30px',
-		backgroundColor: '#fff',
-	},
-	{
-		section: 'content',
-		padding: '0px 30px',
-	},
-	{
-		section: 'carousel',
-		padding: '0px 30px',
-		backgroundColor: '#fff',
-	},
-	{
-		section: 'post-card',
-		padding: '50px 30px',
-		backgroundColor: '#fff',
-	},
-	{
 		section: 'image',
-		padding: '0px 30px',
+		padding: '0px 0px',
 		backgroundColor: '#fff',
+		image: 'https://storage.googleapis.com/tef-website/test-thumb.png',
 	},
+	{
+		text: 'Hello there',
+		section: 'heading',
+		padding: '0px 30px',
+	},
+	{
+		section: 'paragraph',
+		// align: 'center',
+		text: `Lorem ipsum dolor sit amet consectetur <a href='google.com'>Hello</a> adipisicing elit.
+    <br/>
+    <br/>
+    For me, the is a concept with the capacity to power present and future automation. 
+    If you parameterize a concept then you can most likely find a path to automation.
+    `,
+		padding: '0px 30px',
+	},
+	{
+		section: 'button',
+		text: 'Go to dashboard',
+		backgroundColor: '#5e6ebf',
+		padding: '0px 30px',
+	},
+
+	// {
+	// 	section: 'post-card',
+	// 	padding: '50px 30px',
+	// 	backgroundColor: '#fff',
+	// },
+	// {
+	// 	section: 'person',
+	// 	padding: '30px',
+	// 	backgroundColor: '#fff',
+	// },
+	// {
+	// 	section: 'carousel',
+	// 	padding: '0px 30px',
+	// 	backgroundColor: '#fff',
+	// },
 ];

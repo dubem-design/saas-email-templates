@@ -18,8 +18,8 @@ function Element({ content }: { content: any }) {
 				></MjmlImage>
 			</MjmlColumn>
 			<MjmlColumn width="66.66666666666666%" vertical-align="middle">
-				<MjmlText align="right" padding="0px" fontSize={'12px'} color={'#bbb'}>
-					{content.copyrightText || '© 2020 OnePage. All rights reserved.'}
+				<MjmlText align="right" padding="0px" font-size={ content.fontSize || '16px' } color={'#bbb'}>
+					{content.text}
 				</MjmlText>
 			</MjmlColumn>
 		</MjmlSection>

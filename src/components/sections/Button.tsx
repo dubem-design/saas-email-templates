@@ -9,7 +9,7 @@ import {
 	MjmlButton,
 } from 'mjml-react';
 
-function Element({ content, config }: { content: any; config: any }) {
+function Element({ content }: { content: any }) {
 	const height = content.height || '8px';
 	return (
 		<MjmlSection
@@ -17,17 +17,16 @@ function Element({ content, config }: { content: any; config: any }) {
 			padding={content.padding || '30px 0px'}
 			textAlign="left"
 		>
-			<MjmlText
-				color={content.color || config.color || '#637381'}
-				align={content.align || config.align || 'left'}
-				font-size={content.fontSize || '16px'}
+			<MjmlButton
+				background-color={content.backgroundColor || "#5e6ebf"}
+				align="left"
+				color={content.color || '#ffffff'}
+				font-size="17px"
+				font-weight="bold"
+				href="https://google.com"
 			>
-				<p
-					dangerouslySetInnerHTML={{
-						__html: content.text || '',
-					}}
-				></p>
-			</MjmlText>
+				{content.text}
+			</MjmlButton>
 		</MjmlSection>
 	);
 }

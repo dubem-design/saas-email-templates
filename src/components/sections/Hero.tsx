@@ -12,7 +12,7 @@ function Element({ config, content }: { config: any, content: any }) {
 	return (
 		<MjmlWrapper padding={content.padding || '30px'} backgroundColor={content.backgroundColor || '#fff'}>
 			<MjmlSection
-        background-url={content.heroBackgroundImage} 
+        background-url={content.image} 
         background-color={content.heroBackgroundColor || '#fff'}
 				background-repeat="no-repeat"
 				background-size="cover"

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MjmlWrapper, MjmlSection, MjmlColumn, MjmlImage } from 'mjml-react';
 
-import sectionsMap from '../sections-map';
+import sectionsMap from './sections-map';
 
 function Element({ config, layout, sections }: any) {
   return sections.map((content: any, index: number) => {

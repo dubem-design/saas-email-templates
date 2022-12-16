@@ -1,18 +1,18 @@
 import { render } from 'mjml-react';
 import { convert } from 'html-to-text';
+import { configType, componentType } from './common/types';
 
 // auto-import templates
 import { emailComponent } from './App';
-export default class mailSpinner {
-	layout: Array<object>;
-	config: object;
+export default class mailSetup {
+	layout: Array<componentType>;
+	config: configType;
 
-	constructor(setup: any) {
-		const { config, layout } = setup;
+	constructor(config: configType, layout: Array<componentType>) {
 		this.config = config;
 		this.layout = layout;
 	}
-	generate({ config, sections }: any) {
+	generate(config: configType, sections: Array<componentType>) {
 		const { html } = render(
 			emailComponent({
 				config: { ...this.config, ...config },

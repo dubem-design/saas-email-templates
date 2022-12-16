@@ -6,7 +6,7 @@ import {
 
 
 import Head from "./components/layout/Head";
-import sectionsMap from './sections-map';
+import sectionsMap from './components/sections-map';
 
 export const emailComponent = ({config, layout, sections}:any) => {
 	return (

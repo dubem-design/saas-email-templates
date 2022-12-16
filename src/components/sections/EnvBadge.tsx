@@ -12,7 +12,7 @@ function Element({ data, content }: { data: any; content: any }) {
 			borderLeft="5px solid #ffd500"
 		>
 			<MjmlText align="center" >
-				{content.env}{' '}
+				{content.text}{' '}
 			</MjmlText>
 		</MjmlSection>
 	);
