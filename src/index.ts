@@ -1,21 +1,33 @@
 import { render } from 'mjml-react';
+import { convert } from 'html-to-text';
+import { configType, componentType } from './common/types';
 
 // auto-import templates
-const normalizedPath = require("path").join(__dirname, "templates");
-let templateList: { [key: string]: any } = {}
-require("fs").readdirSync(normalizedPath).forEach(function (file: any) {
-  const name = file.split('.tsx')[0]
-  templateList[name] = require("./templates/" + file);
-});
+import { emailComponent } from './App';
+export default class mailSetup {
+	layout: Array<componentType>;
+	config: configType;
 
-// Template fetcher function, accepts name and config
-export const template = function (name: string, data: object, config: any): string {
-  if (!templateList[name]) throw 'Template not found'
-  const { html } = render(templateList[name].generate(data, config), {
-    validationLevel: 'soft',
-  });
+	constructor(config: configType, layout: Array<componentType>) {
+		this.config = config;
+		this.layout = layout;
+	}
+	generate(config: configType, sections: Array<componentType>) {
+		const { html } = render(
+			emailComponent({
+				config: { ...this.config, ...config },
+				layout: this.layout,
+				sections,
+			}),
+			{
+				validationLevel: 'soft',
+			}
+		);
 
-  return html;
-};
+		const text = convert(html, {
+			wordwrap: 130,
+		});
 
-export const list = templateList
+		return { html, text };
+	}
+}

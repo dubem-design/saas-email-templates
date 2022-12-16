@@ -11,12 +11,15 @@ import {
   MjmlAll,
 } from "mjml-react";
 
-function Head({ data, config }: {data: any, config: any}) {
+function Head({ config }: {config: any, }) {
   return (
     <MjmlHead>
-      <MjmlTitle>{data.title}</MjmlTitle>
-      <MjmlPreview>{data.preview}</MjmlPreview>
-      <MjmlStyle>{data.css}</MjmlStyle>
+      <MjmlTitle>{config.title}</MjmlTitle>
+      <MjmlPreview>{config.preview}</MjmlPreview>
+      <MjmlStyle>{config.css}
+      </MjmlStyle>
+      <MjmlStyle>{config.css}
+      </MjmlStyle>
       <MjmlFont
         name="DM Sans"
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"

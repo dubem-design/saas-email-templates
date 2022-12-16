@@ -1,65 +1,48 @@
-# Saas Email Templates- ALPHA (SAT)
+# Saas Email Templates
+
+Plug ang and play email templates for product people ✌️
 
 [![npm version](https://img.shields.io/npm/v/publish-please.svg)](https://www.npmjs.com/package/publish-please)
 
-![alt="SAT email template thumbnail" text](https://s3.eu-west-3.amazonaws.com/dubem.design/resources/thumbnail-small.jpg)
+## Usage
 
+```js
+// maybe in like the boostrap/ startup part of your backend
+import mailSetup from '@dubem-design/saas-email-templates';
 
-SAT is a free resource nd design solution to help startups focus on their core solution while still maintaining a beautiful looking email template compatible accross multiple browsers and responsive screen sizes. The core of this project is to:
-  - Provide well designed email templates
-  - Provide content ideas that can easily be resued
-  - Foster the adoption of proper email standards
-  - A plug and play approach to getting up and running
+const mailTemplate = new mailSetup({
+	layout, // Template Layout options
+});
 
-### Usage
-Todo
-### Templates
-| Name | Product Life Cycle | Kind | Status |
-| ------ | ------ | ------ | ------ |
-| Product survey | launch | surevy | in-progress |
-| Relaunch campaign | launch | notice | designing-UI |
-| Early access notice | launch | notice | designing-UI |
-| Launch notice | launch | notice | designing-UI |
-| Email verification prompt | auth | prompt | designing-UI |
-| Password Change Prompt | auth | prompt | designing-UI |
-| New device Login Prompt | auth | prompt | designing-UI |
-| Welcome notice | onboarding | notice | designing-UI |
-| On-boarding notice | onboarding | notice | designing-UI |
-| free_trial_reminder | billing | reminder | designing-UI |
-| free_trail_ended | billing | notice | designing-UI |
-| after_free_trail_ended | billing | notice | designing-UI |
-| reactivation_attempt_feedback | billing | notice | designing-UI |
-| Invoice | billing | notice | designing-UI |
-| team_invitation | team | prompt | designing-UI |
-| team_invitation_invitee_reminder | team | reminder | designing-UI |
-### Resources
-* [Figma] - Best UI design platform
-* [MJML] - Great for email templates!
-* [Gulp] - Compile MJML files
-* [Esign] - E signature maker
+const { html, text } = mailTemplate.generate({ config, sections });
+// page configuration options &
+// definition of page sections
+```
 
-### Todos
+## See Layout, Config & Sections Options
+### Layout
+### Config
+### Sections
 
- - Setup Releases
- - Design Figma UI
- - Create structure of layouts and templates
- - Write proper DOCS
- - Create illustrations for emails
+## Resources
 
-License
-----
+- [Figma] - Best UI design platform
+- [MJML] - Great for email templates!
+- [Gulp] - Compile MJML files
+- [Esign] - E signature maker
+
+## License
+
 MIT
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [Figma]: <https://www.figma.com/>
-   [MJML]: <https://github.com/mjmlio/mjml>
-   [Gulp]: <http://gulpjs.com>
-   [Esign]: <http://www.esignaturemaker.com/live-digital-signature/>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+[figma]: https://www.figma.com/
+[mjml]: https://github.com/mjmlio/mjml
+[gulp]: http://gulpjs.com
+[esign]: http://www.esignaturemaker.com/live-digital-signature/
+[pldb]: https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md
+[plgh]: https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md
+[plgd]: https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md
+[plod]: https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md
+[plme]: https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md
+[plga]: https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md

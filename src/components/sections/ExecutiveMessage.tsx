@@ -15,7 +15,7 @@ const avatarStyle = {
   backgroundColor: "#000",
 };
 
-function Body({ data, config }: {data: any, config: any}) {
+function Element({ data, content }: {data: any, content: any}) {
   return (
     <MjmlColumn width="100%">
       <MjmlSection>
@@ -41,4 +41,4 @@ function Body({ data, config }: {data: any, config: any}) {
   );
 }
 
-export default Body;
+export default Element;
