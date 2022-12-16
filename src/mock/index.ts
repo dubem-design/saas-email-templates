@@ -21,20 +21,6 @@ export const layout: Array<componentType> = [
 	{
 		section: 'spacer',
 	},
-	// {
-	// 	section: 'stripe',
-	// 	sectionBackground: '',
-	// 	height: '10px',
-	// 	padding: '0px 0px',
-	// 	colors: [
-	// 		{ color: '#ffd500', width: '10%' },
-	// 		{ color: '#000', width: '30%' },
-	// 		{ color: 'red', width: '20%' },
-	// 		{ color: 'teal', width: '15%' },
-	// 		{ color: 'orange', width: '15%' },
-	// 		{ color: '#ffd500', width: '10%' },
-	// 	],
-	// },
 	{
 		section: 'header',
 		logoUrl: 'https://storage.googleapis.com/tef-website/Logo.png',
