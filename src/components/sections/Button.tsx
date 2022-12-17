@@ -1,33 +1,21 @@
 import React from 'react';
+import { configType, componentType } from '../../common/types';
+import { MjmlWrapper, MjmlColumn } from 'mjml-react';
+import ButtonBlock from '../blocks/ButtonBlock';
 
-import {
-	MjmlWrapper,
-	MjmlSection,
-	MjmlColumn,
-	MjmlImage,
-	MjmlText,
-	MjmlButton,
-} from 'mjml-react';
-
-function Element({ content }: { content: any }) {
-	const height = content.height || '8px';
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
-		<MjmlSection
+    <MjmlWrapper
+			full-width={content.fullWidth ? 'full-width' : undefined}
 			backgroundColor={'#fff'}
-			padding={content.padding || '30px 0px'}
+			borderRadius={content.borderRadius || '0px'}
+			padding={content.padding || '0px 0px'}
 			textAlign="left"
 		>
-			<MjmlButton
-				background-color={content.backgroundColor || "#5e6ebf"}
-				align="left"
-				color={content.color || '#ffffff'}
-				font-size="17px"
-				font-weight="bold"
-				href="https://google.com"
-			>
-				{content.text}
-			</MjmlButton>
-		</MjmlSection>
+			<MjmlColumn verticalAlign={'center'} padding="0px">
+				<ButtonBlock config={config} content={content} />
+			</MjmlColumn>
+		</MjmlWrapper>
 	);
 }
 

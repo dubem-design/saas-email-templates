@@ -1,54 +1,43 @@
 import React from 'react';
+import { MjmlSection, MjmlColumn, MjmlWrapper, MjmlText } from 'mjml-react';
+import ButtonBlock from '../blocks/ButtonBlock';
+import { configType } from '../../common/types';
 
-import {
-	MjmlSection,
-	MjmlColumn,
-	MjmlWrapper,
-	MjmlText,
-	MjmlButton,
-} from 'mjml-react';
-
-function Element({ config, content }: { config: any, content: any }) {  
+function Element({ config, content }: { config: configType; content: any }) {
 	return (
-		<MjmlWrapper padding={content.padding || '30px'} backgroundColor={content.backgroundColor || '#fff'}>
+    <MjmlWrapper
+			full-width={content.fullWidth}
+			padding={content.padding || '30px'}
+			backgroundColor={content.backgroundColor || '#fff'}
+			borderRadius={content.borderRadius || '0px'}
+		>
 			<MjmlSection
-        background-url={content.image} 
-        background-color={content.heroBackgroundColor || '#fff'}
+				background-url={content.image}
+				background-color={content.innerBackgroundColor || '#fff'}
 				background-repeat="no-repeat"
 				background-size="cover"
 				vertical-align="middle"
-				full-width={content.fullWidth ? 'full-width' : undefined}
+				padding={content.innerPadding || '0px'}
+				borderRadius={content.innerBorderRadius || '30px'}
 			>
 				<MjmlColumn width="100%" vertical-align="middle">
 					<MjmlText
-						align="center"
-						font-size="14px"
+						align={content.align || 'center'}
+						font-size="24px"
 						color="#45474e"
-						padding-bottom="10px"
+						padding="0px"
+						fontWeight={600}
 						padding-top="45px"
 					>
-						<span style={{ fontSize: '30px', lineHeight: '30px' }}>
-							More than an email template
-						</span>
-						<br />
-						<br />
-						Only on <span style={{ color: '#e85034' }}>Mailjet</span> template
-						builder
+						<p
+							dangerouslySetInnerHTML={{
+								__html: content.text || '',
+							}}
+						></p>
 					</MjmlText>
-					<MjmlButton
-						align="center"
-						background-color={config.primaryColor || '#e85034'}
-						color="#fff"
-						border-radius="24px"
-						href="https://mjml.io"
-						font-family="Ubuntu, Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif"
-						padding-bottom="45px"
-						padding-top="10px"
-					>
-						SUBSCRIBE
-					</MjmlButton>
+					<ButtonBlock config={config} content={content} />
 				</MjmlColumn>
-			</MjmlSection>{' '}
+			</MjmlSection>
 		</MjmlWrapper>
 	);
 }

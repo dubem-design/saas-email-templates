@@ -7,10 +7,17 @@ import {
 	MjmlText,
 	MjmlButton,
 } from 'mjml-react';
+import { configType, componentType } from '../../common/types';
 
-function Element({ config, content }: { config: any, content: any }) {  
+
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
-		<MjmlWrapper padding={content.padding || '30px'} backgroundColor={content.backgroundColor || '#fff'}>
+    <MjmlWrapper
+			full-width={content.fullWidth ? 'full-width' : undefined}
+			borderRadius={content.borderRadius}
+			padding={content.padding || '30px'}
+			backgroundColor={content.backgroundColor || '#fff'}
+		>
 			<MjmlSection
 				background-url="http://191n.mj.am/img/191n/1t/h0.jpg"
 				vertical-align="middle"

@@ -1,14 +1,25 @@
 import React from 'react';
+import { MjmlSection, MjmlColumn, MjmlImage } from 'mjml-react';
+import { configType } from '../../common/types';
 
-import { MjmlWrapper, MjmlSection, MjmlColumn , MjmlImage, MjmlText} from 'mjml-react';
-
-function Element({ content }: { content: any }) {
+function Element({ config, content }: { config: configType; content: any }) {
 	const height = content.height || '8px';
 	return (
-		<MjmlSection backgroundColor={content.backgroundColor}  padding={content.padding || '30px'} textAlign="left">
-      <MjmlColumn width="100%" vertical-align="middle" >
-        <MjmlImage src={content.image} align='left' alt="OnePage" padding="0px"></MjmlImage>
-      </MjmlColumn>
+    <MjmlSection
+			full-width={content.fullWidth}
+			backgroundColor={content.backgroundColor}
+			borderRadius={content.borderRadius || '0px'}
+			padding={content.padding || '30px'}
+			textAlign={content.align || 'left'}
+		>
+			<MjmlColumn width="100%" vertical-align="middle">
+				<MjmlImage
+					src={content.image}
+					align="left"
+					alt={content.imageAlt || 'image'}
+					padding="0px"
+				></MjmlImage>
+			</MjmlColumn>
 		</MjmlSection>
 	);
 }

@@ -1,19 +1,12 @@
 import React from 'react';
+import { MjmlSection, MjmlColumn, MjmlText } from 'mjml-react';
+import { componentType, configType, } from '../../common/types';
 
-import {
-	MjmlWrapper,
-	MjmlSection,
-	MjmlColumn,
-	MjmlImage,
-	MjmlText,
-	MjmlButton,
-} from 'mjml-react';
-
-function Element({ content }: { content: any }) {
-	const height = content.height || '8px';
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
 		<MjmlSection
-			backgroundColor={'#fff'}
+			full-width={content.fullWidth}
+			backgroundColor={content.backgroundColor || '#fff'}
 			padding={content.padding || '30px 0px'}
 			textAlign="left"
 		>

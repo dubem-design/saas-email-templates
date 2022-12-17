@@ -1,21 +1,21 @@
 import React from 'react';
+import { configType, componentType } from '../../common/types';
 
 import {
 	MjmlWrapper,
 	MjmlSection,
 	MjmlColumn,
-	MjmlImage,
 	MjmlText,
-	MjmlButton,
 	MjmlCarousel,
 	MjmlCarouselImage,
 } from 'mjml-react';
 
-function Element({ content }: { content: any }) {
-	const height = content.height || '8px';
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
-		<MjmlWrapper
+    <MjmlWrapper
+			full-width={content.fullWidth ? 'full-width' : undefined}
 			backgroundColor={content.backgroundColor || ''}
+			borderRadius={content.borderRadius || '0px'}
 			padding={content.padding || '15px 15px'}
 		>
 			<MjmlSection>
