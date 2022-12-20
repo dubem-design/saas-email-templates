@@ -1,14 +1,15 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import type { Request, Response } from 'express';
 import { config, sections, layout } from './mock/index';
 import mailSetup from './index';
 
-const port = 3003;
+const port: number = 3003;
 const app = express();
 
-const mailTemplate = new mailSetup(config, layout);
+const mailTemplate = new mailSetup({ config, layout });
 
 app.get('/', (req: Request, res: Response) =>
-	res.send(mailTemplate.generate(config, sections).html)
+	res.send(mailTemplate.generate({ config, sections }).html)
 );
 
 app.listen(port, () =>

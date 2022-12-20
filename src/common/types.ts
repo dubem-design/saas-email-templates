@@ -4,7 +4,7 @@ import type {
 	PaddingProps,
 	MjmlImageProps,
 	MjmlDividerProps,
-  HrefProps,
+	HrefProps,
 } from 'mjml-react';
 
 export interface configType {
@@ -28,6 +28,7 @@ export interface componentType {
 	padding?: PaddingProps['padding'];
 	innerPadding?: string;
 	fullWidth?: Boolean;
+	border?: BorderProps['border'];
 	borderRadius?: BorderProps['borderRadius'];
 	innerBackgroundColor?: string;
 	innerBorderRadius?: string;
@@ -49,6 +50,7 @@ export interface componentType {
 	// button Styles
 	buttonBackgroundColor?: string;
 	buttonColor?: string;
+	buttonBorder?: BorderProps['border'];
 	buttonBorderRadius?: string;
 	buttonPadding?: string;
 	buttonHref?: string;

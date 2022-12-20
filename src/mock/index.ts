@@ -29,7 +29,7 @@ export const layout: Array<componentType> = [
 		imageSrc: 'https://storage.googleapis.com/tef-website/Logo.png',
 		padding: '30px',
 		backgroundColor: '#fff',
-		// links: [{ title: 'Dashboard' }, { title: 'Profile' }],
+		imageAlign: 'left',
 	},
 	{
 		section: 'body',
@@ -82,7 +82,7 @@ export const sections: Array<componentType> = [
 		section: 'hero',
 		text: 'More than an email template',
 		fullWidth: false,
-		padding: '30px',
+		padding: '10px 30px',
 		image: 'https://storage.googleapis.com/tef-website/test-thumb.png',
 		innerBackgroundColor: '#efefef44',
 		backgroundColor: '#fff',
@@ -90,7 +90,7 @@ export const sections: Array<componentType> = [
 		buttonBackgroundColor: '#5073CC',
 		buttonHref: 'google.com',
 		align: 'left',
-		innerPadding: '30px',
+		innerPadding: '100px 30px 30px 30px',
 		innerBorderRadius: '16px',
 	},
 
@@ -112,8 +112,9 @@ export const sections: Array<componentType> = [
 	},
 	{
 		section: 'button',
+		// buttonColor: '#000',
+		// buttonBackgroundColor: 'transparent',
 		buttonText: 'Go to dashboard',
-		buttonBackgroundColor: '#5e6ebf',
 		padding: '0px 30px',
 		align: 'left',
 	},

@@ -21,7 +21,6 @@ function Element({ config, content }: { config: configType; content: any }) {
 				background-color={content.backgroundColor || '#fff'}
 				background-repeat="no-repeat"
 				background-size="cover"
-				vertical-align="middle"
 				full-width={content.fullWidth ? 'full-width' : undefined}
 				padding={'30px'}
 			>

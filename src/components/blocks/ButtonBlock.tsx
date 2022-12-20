@@ -11,11 +11,12 @@ function Element({ config, content }: { config: any; content: any }) {
 			align={content.buttonAlign || config.align || 'left'}
 			color={content.buttonColor || '#ffffff'}
 			href={content.buttonHref || '#'}
-			inner-padding={content.buttonPadding || '10px 25px'}
-			padding="0px"
+      inner-padding={content.buttonPadding || '10px 25px'}
+      border={content.buttonBorder}
 			borderRadius={content.buttonBorderRadius || config.borderRadius || '50%'}
 			font-size={content.buttonFontSize || '17px'}
 			font-weight={content.buttonWeight || 'bold'}
+			padding="0px"
 		>
 			{content.buttonText}
 		</MjmlButton>

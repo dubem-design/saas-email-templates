@@ -22,7 +22,7 @@ function Element({
 			padding={content.padding || '30px 30px'}
 			textAlign="left"
 		>
-			<MjmlColumn width="33.33333333333333%" vertical-align="middle">
+			<MjmlColumn>
 				<MjmlImage
 					src={content.imageSrc}
 					align={content.imageAlign || config.align || 'left'}
@@ -30,22 +30,6 @@ function Element({
 					padding="0px"
 					width="100px"
 				></MjmlImage>
-			</MjmlColumn>
-			<MjmlColumn width="66.66666666666666%" vertical-align="middle">
-				<MjmlText align="right" padding="0px">
-					{content.links
-						? content.links.map(({ title }: any, index: number) => (
-								<a
-									href="https://mjml.io"
-									style={{ textDecoration: 'none' }}
-									key={`link-${index}`}
-								>
-									&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-									{title}
-								</a>
-						  ))
-						: ''}
-				</MjmlText>
 			</MjmlColumn>
 		</MjmlSection>
 	);

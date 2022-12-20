@@ -15,7 +15,6 @@ function Element({ config, content }: { config: configType; content: componentTy
 				borderWidth={content.borderWidth || '5px'}
 				borderColor={content.borderColor || '#000'}
       >
-        
 			</MjmlDivider>
 		</MjmlSection>
 	);

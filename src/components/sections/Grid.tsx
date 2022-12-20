@@ -20,12 +20,11 @@ function Element({ config, content }: { config: configType; content: componentTy
 		>
 			<MjmlSection
 				background-url="http://191n.mj.am/img/191n/1t/h0.jpg"
-				vertical-align="middle"
 				background-size="cover"
 				full-width={content.fullWidth ? 'full-width' : undefined}
 				background-repeat="no-repeat"
 			>
-				<MjmlColumn width="100%" vertical-align="middle">
+				<MjmlColumn width="100%" >
 					<MjmlText
 						align="center"
 						font-size="14px"

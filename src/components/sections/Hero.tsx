@@ -16,18 +16,16 @@ function Element({ config, content }: { config: configType; content: any }) {
 				background-color={content.innerBackgroundColor || '#fff'}
 				background-repeat="no-repeat"
 				background-size="cover"
-				vertical-align="middle"
 				padding={content.innerPadding || '0px'}
 				borderRadius={content.innerBorderRadius || '30px'}
 			>
-				<MjmlColumn width="100%" vertical-align="middle">
+				<MjmlColumn width="100%">
 					<MjmlText
 						align={content.align || 'center'}
 						font-size="24px"
 						color="#45474e"
 						padding="0px"
 						fontWeight={600}
-						padding-top="45px"
 					>
 						<p
 							dangerouslySetInnerHTML={{

@@ -11,7 +11,7 @@ function Element({ config, content }: { config: configType; content: any }) {
 			padding={content.padding || '30px 30px'}
 			textAlign="left"
 		>
-			<MjmlColumn vertical-align="middle">
+			<MjmlColumn>
 				<MjmlText align={content.align || 'left'} padding="0px">
 					{content.links
 						? content.links.map(

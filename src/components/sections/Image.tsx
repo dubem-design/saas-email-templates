@@ -12,7 +12,7 @@ function Element({ config, content }: { config: configType; content: any }) {
 			padding={content.padding || '30px'}
 			textAlign={content.align || 'left'}
 		>
-			<MjmlColumn width="100%" vertical-align="middle">
+			<MjmlColumn width="100%">
 				<MjmlImage
 					src={content.image}
 					align="left"

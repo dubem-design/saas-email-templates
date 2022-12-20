@@ -1,9 +1,8 @@
 import React from 'react';
 import { MjmlSection, MjmlColumn, MjmlImage, MjmlText } from 'mjml-react';
-import { configType } from '../../common/types';
+import { configType, componentType } from '../../common/types';
 
-function Element({ config, content }: { config: configType; content: any }) {
-	const height = content.height || '8px';
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
     <MjmlSection
 			full-width={content.fullWidth}
