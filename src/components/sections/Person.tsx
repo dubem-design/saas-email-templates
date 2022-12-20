@@ -1,49 +1,44 @@
 import React from 'react';
+import { MjmlSection, MjmlColumn, MjmlImage, MjmlText } from 'mjml-react';
+import { configType, componentType } from '../../common/types';
 
-import {
-	MjmlWrapper,
-	MjmlSection,
-	MjmlColumn,
-	MjmlImage,
-	MjmlText,
-} from 'mjml-react';
-
-function Element({ content }: { content: any }) {
-	const height = content.height || '8px';
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
-		<MjmlSection
+    <MjmlSection
+			full-width={content.fullWidth}
 			backgroundColor={content.backgroundColor || '#fff'}
+			borderRadius={content.borderRadius || '0px'}
 			padding={content.padding || '30px'}
+			verticalAlign={'middle'}
+			textAlign={'left'}
 		>
 			<MjmlColumn width="11%">
 				<MjmlImage
-					padding-right="0px"
-					padding-left="0px"
+					padding={'0px'}
 					align="left"
-					width="70px"
-					href="https://twitter.com/MrJustaine"
-					src="https://cdn.recast.ai/newsletter/justine.png"
+					width="50px"
+					borderRadius={content.borderRadius || '50%'}
+					src={content.image || 'https://via.placeholder.com/40x40'}
 				></MjmlImage>
 			</MjmlColumn>
-			<MjmlColumn width="89%" verticalAlign={'center'}>
-				<MjmlText padding="0 25px">
-					<p style={{ color: '#BDBDBD', lineHeight: '9px' }}>
-						{' '}
-						Justine -{' '}
-						<a
-							href="https://recast.ai?ref=newsletter"
-							style={{ color: '#3498DB' }}
-						>
-							Recast.AI
-						</a>{' '}
-						team{' '}
-					</p>
+			<MjmlColumn width="44%" verticalAlign={'middle'}>
+				<MjmlText padding="5px 0px">
 					<p
-						style={{ color: '#BDBDBD', lineHeight: '9px', fontStyle: 'italic' }}
-					>
-						{' '}
-						Your light in the storm{' '}
-					</p>
+						style={{ margin: '0px', fontSize: '14px' }}
+						dangerouslySetInnerHTML={{
+							__html: content.text || '',
+						}}
+					></p>
+				</MjmlText>
+			</MjmlColumn>
+			<MjmlColumn width="45%" verticalAlign={'middle'}>
+				<MjmlText padding="10px 0px" align="right">
+					<p
+						style={{ margin: '0px', fontSize: '14px' }}
+						dangerouslySetInnerHTML={{
+							__html: content.textTwo || '',
+						}}
+					></p>
 				</MjmlText>
 			</MjmlColumn>
 		</MjmlSection>

@@ -1,20 +1,20 @@
 import React from 'react';
+import { MjmlSection, MjmlDivider } from 'mjml-react';
+import type { configType, componentType } from '../../common/types';
 
-import { MjmlSection, MjmlText, MjmlWrapper, MjmlDivider } from 'mjml-react';
-import { config } from 'dotenv';
-
-function Element({ config, content }: { config: any; content: any }) {
+function Element({ config, content }: { config: configType; content: componentType }) {
 	return (
-		<MjmlSection
+    <MjmlSection
+			full-width={content.fullWidth ? 'full-width' : undefined}
 			padding={content.padding || '30px'}
 			backgroundColor={content.backgroundColor || '#fff'}
+			borderRadius={content.borderRadius || '0px'}
 		>
 			<MjmlDivider
 				borderStyle={content.borderStyle || 'dashed'}
 				borderWidth={content.borderWidth || '5px'}
 				borderColor={content.borderColor || '#000'}
-			>
-				{content.env}{' '}
+      >
 			</MjmlDivider>
 		</MjmlSection>
 	);

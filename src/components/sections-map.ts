@@ -1,6 +1,7 @@
 import SectionsSlot from './SectionsSlot';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
+import SplitHero from './sections/SplitHero';
 import Spacer from './sections/Spacer';
 import Image from './sections/Image';
 import EnvBadge from './sections/EnvBadge';
@@ -11,6 +12,7 @@ import Carousel from './sections/Carousel';
 import Heading from './sections/Heading';
 import Paragraph from './sections/Paragraph';
 import Button from './sections/Button';
+import Links from './sections/Links';
 import Footer from './sections/Footer';
 
 const section: any = {
@@ -29,11 +31,17 @@ const section: any = {
 	hero: {
 		component: Hero,
 	},
+	'split-hero': {
+		component: SplitHero,
+	},
 	image: {
 		component: Image,
 	},
 	button: {
 		component: Button,
+	},
+	links: {
+		component: Links,
 	},
 	heading: {
 		component: Heading,

@@ -1,18 +1,18 @@
 import React from 'react';
+import { MjmlSection, MjmlText } from 'mjml-react';
+import { configType, componentType } from '../../common/types';
 
-import { MjmlSection, MjmlText, MjmlWrapper } from 'mjml-react';
-
-function Element({ data, content }: { data: any; content: any }) {
+function Element({ config, content }: { config: configType; content: any }) {
 	return (
 		<MjmlSection
+			full-width={content.fullWidth ? 'full-width' : undefined}
 			backgroundColor={content.backgroundColor || '#fff'}
 			borderRadius={content.borderRadius}
-			paddingTop="5px"
-			paddingBottom={'5px'}
+			padding={content.padding || '0px 30px'}
 			borderLeft="5px solid #ffd500"
 		>
-			<MjmlText align="center" >
-				{content.text}{' '}
+			<MjmlText align={content.align || 'center'} color={content.color}>
+				{content.text}
 			</MjmlText>
 		</MjmlSection>
 	);

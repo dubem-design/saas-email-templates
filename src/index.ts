@@ -1,4 +1,4 @@
-import { render } from 'mjml-react';
+import { MjmlError, render } from 'mjml-react';
 import { convert } from 'html-to-text';
 import { configType, componentType } from './common/types';
 
@@ -8,12 +8,24 @@ export default class mailSetup {
 	layout: Array<componentType>;
 	config: configType;
 
-	constructor(config: configType, layout: Array<componentType>) {
+	constructor({
+		config,
+		layout,
+	}: {
+		config: configType;
+		layout: Array<componentType>;
+	}) {
 		this.config = config;
 		this.layout = layout;
 	}
-	generate(config: configType, sections: Array<componentType>) {
-		const { html } = render(
+	generate({
+		config,
+		sections,
+	}: {
+		config: configType;
+		sections: Array<componentType>;
+	}) {
+		const { html, errors }: { html: string; errors: Array<MjmlError> } = render(
 			emailComponent({
 				config: { ...this.config, ...config },
 				layout: this.layout,
@@ -24,7 +36,11 @@ export default class mailSetup {
 			}
 		);
 
-		const text = convert(html, {
+		// if (errors && errors.length > 0) throw errors;
+		console.log(errors.length);
+		console.log(errors);
+
+		const text: string = convert(html, {
 			wordwrap: 130,
 		});
 

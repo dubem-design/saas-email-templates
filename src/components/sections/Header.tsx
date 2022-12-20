@@ -1,52 +1,35 @@
 import React from 'react';
+import { configType, componentType } from '../../common/types';
 
-import {
-	MjmlWrapper,
-	MjmlSection,
-	MjmlColumn,
-	MjmlImage,
-	MjmlText,
-} from 'mjml-react';
-import { config } from 'dotenv';
+import { MjmlSection, MjmlColumn, MjmlImage, MjmlText } from 'mjml-react';
 
 function Element({
 	config,
 	content,
 }: {
-	config: any;
-	content: any;
+	config: configType;
+	content: componentType;
 }) {
-  const { backgroundColor } = content;
-  return (
+	return (
 		<MjmlSection
-			backgroundColor={backgroundColor || '#fff'}
+			full-width={content.fullWidth ? 'full-width' : undefined}
+			borderRadius={content.borderRadius || undefined}
+			background-url={content.backgroundImage}
+			backgroundRepeat={content.backgroundRepeat || 'no-repeat'}
+			backgroundPosition={content.backgroundPosition || 'top center'}
+			backgroundSize={content.backgroundSize || 'cover'}
+			backgroundColor={content.backgroundColor || '#fff'}
 			padding={content.padding || '30px 30px'}
 			textAlign="left"
 		>
-			<MjmlColumn width="33.33333333333333%" vertical-align="middle">
+			<MjmlColumn>
 				<MjmlImage
-					src={content.logoUrl}
-					align={content.align || config.align || 'left'}
-					alt="OnePage"
+					src={content.imageSrc}
+					align={content.imageAlign || config.align || 'left'}
+					alt="Logo"
 					padding="0px"
 					width="100px"
 				></MjmlImage>
-			</MjmlColumn>
-			<MjmlColumn width="66.66666666666666%" vertical-align="middle">
-				<MjmlText align="right" padding="0px">
-					{content.links
-						? content.links.map(({ title }: any, index: number) => (
-								<a
-									href="https://mjml.io"
-									style={{ textDecoration: 'none' }}
-									key={`link-${index}`}
-								>
-									&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-									{title}
-								</a>
-						  ))
-						: ''}
-				</MjmlText>
 			</MjmlColumn>
 		</MjmlSection>
 	);
