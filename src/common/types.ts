@@ -7,6 +7,10 @@ import type {
 	HrefProps,
 } from 'mjml-react';
 
+export type layoutsType = {
+	[key: string]: Array<componentType>;
+};
+
 export interface configType {
 	title: string; //e.g. public, minimal, subscriber, transactional
 	padding?: string; // Default is 16px or 8px (Using the 8-point grid system)
@@ -19,6 +23,7 @@ export interface configType {
 
 export interface componentType {
 	// sections styles
+	sections?: componentType[];
 	section: string;
 	title?: string;
 	text?: string;
@@ -28,7 +33,6 @@ export interface componentType {
 	padding?: PaddingProps['padding'];
 	innerPadding?: string;
 	fullWidth?: Boolean;
-	border?: BorderProps['border'];
 	borderRadius?: BorderProps['borderRadius'];
 	innerBackgroundColor?: string;
 	innerBorderRadius?: string;
@@ -44,6 +48,11 @@ export interface componentType {
 		imageWidth?: string;
 	}>;
 	// border styles
+	border?: BorderProps['border'];
+	borderTop?: BorderProps['borderTop'];
+	borderRight?: BorderProps['borderRight'];
+	borderBottom?: BorderProps['borderBottom'];
+	borderLeft?: BorderProps['borderLeft'];
 	borderWidth?: MjmlDividerProps['borderWidth'];
 	borderColor?: MjmlDividerProps['borderColor'];
 	borderStyle?: MjmlDividerProps['borderStyle'];

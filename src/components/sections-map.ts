@@ -14,10 +14,14 @@ import Paragraph from './sections/Paragraph';
 import Button from './sections/Button';
 import Links from './sections/Links';
 import Footer from './sections/Footer';
+import Wrap from './sections/Wrap';
 
 const section: any = {
 	body: {
 		component: SectionsSlot,
+	},
+	wrap: {
+		component: Wrap,
 	},
 	env: {
 		component: EnvBadge,
