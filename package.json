@@ -1,10 +1,10 @@
 {
   "name": "@dubem-design/saas-email-templates",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Awesome email templates for Saas startups",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node-dev --poll src/server.ts",
+    "dev": "ts-node-dev --poll src/demo.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel --extensions .ts,.tsx ./src -d ./dist",
     "build:watch": "babel --extensions .ts,.tsx ./src -d ./dist --watch",

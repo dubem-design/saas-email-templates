@@ -1,35 +1,38 @@
 import { MjmlError, render } from 'mjml-react';
 import { convert } from 'html-to-text';
-import { configType, componentType } from './common/types';
+import { configType, componentType, layoutsType } from './common/types';
 
 // auto-import templates
 import { emailComponent } from './App';
 export default class mailSetup {
 	layout: Array<componentType>;
 	config: configType;
+	layouts: layoutsType;
 
 	constructor({
 		config,
-		layout,
+		layouts,
 	}: {
 		config: configType;
-		layout: Array<componentType>;
+		layouts: layoutsType;
 	}) {
 		this.config = config;
-		this.layout = layout;
+		this.layouts = layouts;
 	}
-	generate({
+  generate({
+    layout,
 		config,
-		sections,
+		template,
 	}: {
+		layout: string;
 		config: configType;
-		sections: Array<componentType>;
+		template: Array<componentType>;
 	}) {
 		const { html, errors }: { html: string; errors: Array<MjmlError> } = render(
 			emailComponent({
 				config: { ...this.config, ...config },
-				layout: this.layout,
-				sections,
+				layout: this.layouts[layout],
+				template,
 			}),
 			{
 				validationLevel: 'soft',
